@@ -18,9 +18,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun bt_Linear_layout(view: View){
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.linear_layout)
     }
     fun bt_Relative_layout(view: View){
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.relative_layout)
     }
 }
