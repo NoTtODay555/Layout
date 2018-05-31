@@ -9,4 +9,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+    fun on_bt_Fream_layout(){
+        setContentView(R.layout.frame_layout)
+    }
+    fun Back_click(){
+        setContentView(R.layout.activity_main)
+    }
 }
