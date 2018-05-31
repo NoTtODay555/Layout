@@ -30,7 +30,9 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Linear Layout"            android:id="@+id/bt_Linear_layout"/>
+            android:text="Linear Layout"
+            android:onClick="bt_Linear_layout"
+            tools:ignore="OnClick" />
 
     </LinearLayout>
     <Button
