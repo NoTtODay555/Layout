@@ -25,7 +25,7 @@
             android:layout_marginRight="20dp"
             android:text="Frame Layout"
             android:onClick="on_bt_Fream_layout"
-            tools:ignore="OnClick" />
+            />
 
         <Button
             android:layout_width="wrap_content"
@@ -35,11 +35,34 @@
             tools:ignore="OnClick" />
 
     </LinearLayout>
-    <Button
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Relative layout"
-        android:onClick="bt_Relative_layout"
-        tools:ignore="OnClick" />
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Relative layout"
+            android:onClick="bt_Relative_layout"
+            tools:ignore="OnClick" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recycelview layout"
+            android:onClick="bt_Recycelview_layout"
+            tools:ignore="OnClick"
+            android:layout_marginLeft="40dp"/>
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="test"
+        android:textSize="50dp"
+        android:layout_marginTop="30dp"
+        android:id="@+id/test"/>
+
+
+
+
     </LinearLayout>
 
