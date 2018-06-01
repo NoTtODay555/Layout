@@ -23,10 +23,6 @@ class Main2Activity : AppCompatActivity() {
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
-         fun onItemClick() {
-             val intent = Intent(this,MainActivity::class.java)
-             startActivity(intent)
-         }
 
         fun addAnimals() {
             animals.add("dog")
