@@ -15,12 +15,15 @@ class Main2Activity : AppCompatActivity() {
         addAnimals()
         rv_animal_list.layoutManager = LinearLayoutManager(this)
         rv_animal_list.adapter = ItemAdater(animals, this,actionItemClick1 = {
-            val intent = Intent(this,MainActivity::class.java)
-            startActivity(intent)
+            setContentView(R.layout.image)
         })
     }
         fun bt_back(view: View){
             val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        }
+        fun Back(view: View){
+            val intent = Intent(this,Main2Activity::class.java)
             startActivity(intent)
         }
 

@@ -33,7 +33,6 @@ class ItemAdater(val items: ArrayList<String>, val context: Context, private var
                 btlist.text = str
                 btlist.setOnClickListener {
                     actionItemClick1.invoke()
-
                 }
             }
         }
