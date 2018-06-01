@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.any_list.view.*
 
-class ItemAdater(val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class ItemAdater(val items: ArrayList<String>, val context: Context, private var actionItemClick1: () -> Unit) : RecyclerView.Adapter<ItemAdater.ViewHolder>() {
 
     // Gets the number of animals in the list
     override fun getItemCount(): Int {
@@ -21,11 +21,24 @@ class ItemAdater(val items : ArrayList<String>, val context: Context) : Recycler
 
     // Binds each animal in the ArrayList to a view
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
-        holder?.tvAnimalType?.text = items.get(position)
+        holder?.onBindData(items[position])
+    }
+
+    inner  class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+        // Holds the TextView that will add each animal to
+        var btlist = view.bt_list
+
+        fun onBindData(str: String) {
+            view.apply {
+                btlist.text = str
+                btlist.setOnClickListener {
+                    actionItemClick1.invoke()
+
+                }
+            }
+        }
     }
 }
 
-class ViewHolder (view :View) : RecyclerView.ViewHolder(view) {
-    // Holds the TextView that will add each animal to
-    val tvAnimalType = view.tv_animal_type
-}
+
+

@@ -14,12 +14,19 @@ class Main2Activity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         addAnimals()
         rv_animal_list.layoutManager = LinearLayoutManager(this)
-        rv_animal_list.adapter = ItemAdater(animals, this)
+        rv_animal_list.adapter = ItemAdater(animals, this,actionItemClick1 = {
+            val intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+        })
     }
         fun bt_back(view: View){
             val intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
+         fun onItemClick() {
+             val intent = Intent(this,MainActivity::class.java)
+             startActivity(intent)
+         }
 
         fun addAnimals() {
             animals.add("dog")
